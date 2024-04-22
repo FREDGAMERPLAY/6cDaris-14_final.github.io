@@ -1,0 +1,467 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2px 80px;
+    align-items: center;
+    background-color: #000000;
+}
+
+body::-webkit-scrollbar {
+    background: transparent;
+    width: 1px;
+}
+
+.links2 {
+    display: flex;
+    column-gap: 20px;
+    padding: 0 10px 0 0;
+}
+
+.links2 a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.links2 a:hover {
+    color: red;
+    transition: 0.7s;
+    transform: matrix();
+}
+
+
+.links {
+    display: flex;
+    column-gap: 20px;
+    padding: 0 10px 0 0;
+}
+
+.links a {
+    color: white;
+    text-decoration: none;
+}
+
+.links a:hover {
+    color: red;
+    transition: 0.7s;
+    transform: matrix();
+}
+
+body {
+    background: #000000;
+    color: rgb(255, 255, 255);
+}
+
+/* Estilos para el carrusel */
+.slide {
+    position: relative;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+    margin-top: 26px;
+}
+
+.slide-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: calc(300px + 3em);
+}
+
+.slide-open:checked + .slide-item {
+    position: static;
+    opacity: 100;
+}
+
+.slide-item {
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
+}
+
+.slide-item img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+.slide-control {
+    background: rgba(138, 137, 137, 0.774);
+    border-radius: 50%;
+    color: #af1616;
+    cursor: pointer;
+    display: none;
+    font-size: 60px;
+    height: 60px;
+    line-height: 50px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-align: center;
+    width: 60px;
+    z-index: 10;
+}
+
+.slide-control.prev {
+    left: 2%;
+}
+
+.slide-control.next {
+    right: 2%;
+}
+
+.slide-control:hover {
+    background: rgba(197, 14, 14, 0.589);
+    color: #aaaaaa;
+}
+
+#slide-1:checked ~ .control-1,
+#slide-2:checked ~ .control-2,
+#slide-3:checked ~ .control-3,
+#slide-4:checked ~ .control-4 {
+    display: block;
+}
+
+.slide-indicador {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+}
+
+.slide-indicador li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.slide-circulo {
+    color: #828282;
+    cursor: pointer;
+    display: block;
+    font-size: 50px;
+}
+
+.slide-circulo:hover {
+    color: #aaaaaa;
+}
+
+#slide-1:checked ~ .control-1 ~ .slide-indicador li:nth-child(1) .slide-circulo,
+#slide-2:checked ~ .control-2 ~ .slide-indicador li:nth-child(2) .slide-circulo,
+#slide-3:checked ~ .control-3 ~ .slide-indicador li:nth-child(3) .slide-circulo,
+#slide-4:checked ~ .control-4 ~ .slide-indicador li:nth-child(4) .slide-circulo {
+    color: #e70d0d;
+}
+
+/* Estilos para la adaptabilidad */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* Utiliza la altura completa del viewport */
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide-inner {
+    max-width: 100%;
+    height: auto; /* Altura del carrusel, ajustable según tu preferencia */
+}
+
+.slide-item img {
+    width: 100%;
+}
+
+/* Media queries para dispositivos de diferentes tamaños */
+@media screen and (max-width: 768px) {
+    .slide-control {
+        font-size: 40px;
+        height: 40px;
+        line-height: 30px;
+        width: 40px;
+    }
+
+    .slide-circulo {
+        font-size: 30px;
+    }
+}
+
+/* Estilos para la imagen personalizada */
+.card {
+    max-width: 1600px;
+    margin: 0 auto;
+    background-color: #000000;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+}
+
+.card-img {
+    width: 100%;
+    display: block;
+}
+
+/* Estilos para el texto personalizado */
+.text-overlay {
+    position: absolute;
+    top: 15%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra de texto */
+    z-index: 2; /* Asegura que el texto esté sobre la imagen */
+}
+
+.center-text {
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    color: #000000;
+    margin-top: 500px;
+}
+
+/* Estilos para la segunda tarjeta */
+.tarjeta-dentro-imagen {
+    max-width: 150px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgb(255, 255, 255);
+    overflow: hidden;
+    position: relative;
+    margin-top: 10px; /* Espacio entre las tarjetas */
+    transform: translate(-50%, -50%);
+}
+
+.text-overlay2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0); /* Sombra de texto */
+    z-index: 2; /* Asegura que el texto esté sobre la imagen */
+}
+.card3 {
+    max-width: 1%;
+    background-color: #000000;
+    
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.842);
+    padding: 500px;
+    margin: 10px;
+z-index: 2;
+transform: translate(-50%, -50%);
+position: absolute;
+    top: 50%;
+    left: 17%;
+   
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-shadow: 2px 2px 4px rgb(255, 0, 0); /* Sombra de texto */
+}
+.card4 {
+    max-width: 1%;
+    background-color: #00000000;
+    margin-left: 1200PX;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0);
+    padding: 700px;
+    
+z-index: 2;
+transform: translate(-50%, -50%);
+position: absolute;
+    top: 50%;
+    
+   
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-shadow: 2px 2px 4px rgb(255, 255, 255); /* Sombra de texto */
+}
+
+footer {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 50px 0;
+    width: 100%;
+    margin-top: 100px
+
+  /* Evita que el pie de página se contraiga */
+   ; /* Empuja el pie de página hacia abajo */
+
+}
+
+.footer-content {
+    
+   
+    
+    margin-left: 140PX;
+   
+
+}
+
+.footer-content p {
+    margin: 1;
+   
+}
+
+
+
+
+.container11{
+  
+    margin-left: 150px;
+    position: relative;
+    max-width: 800px;
+    width: 100%;
+    background: #00000000;
+    
+    padding: 30px 40px;
+    border-radius: px;
+    display: block;
+   
+}
+.container11 .skill-box{
+    width: 100%;
+    margin: 20px 0;
+    align-items: center;
+}
+.skill-box .title{
+    display: block;
+    font-size: 17px;
+    font-weight: 800;
+    color: #ffffff;
+    margin-right: 500px;
+    
+}
+.skill-box .skill-bar{
+    height: 20px;
+    width: 100%;
+    border-radius: 6px;
+    margin-top: 6px;
+    background: rgb(218, 218, 218);
+}
+.skill-bar .skill-per{
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 100%;
+    border-radius: 6px;
+    background: #f44040;
+    animation: progress 0.4s ease-in-out forwards;
+    opacity: 0;
+}
+.skill-per.css{
+    width: 85%;
+    animation-delay: 0.1s;
+}
+.skill-per.javascript{
+    width: 90%;
+    animation-delay: 0.2s;
+}
+.skill-per.nodejs{
+    width: 88%;
+    animation-delay: 0.3s;
+}
+@keyframes progress {
+    0%{
+        width: 0;
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.skill-per .tooltip{
+    position: absolute;
+    right: -14px;
+    top: -28px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #ffffff;
+    padding: 2px 6px;
+    border-radius: 3px;
+    background: #f44040;
+    z-index: 1;
+}
+.tooltip::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -2px;
+    height: 10px;
+    width: 10px;
+    z-index: -1;
+    background-color: #f44040;
+    transform: translateX(-50%) rotate(45deg);
+
+}
+
+
+
+
+
+
+.contenedor0 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.fila {
+  display: flex;
+  justify-content: center;
+}
+
+.tarjeta {
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(255, 255, 255));
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.contenido {
+  text-align: center;
+}
+
+.tarjeta img {
+  width: 50%;
+  height: auto;
+  border-bottom: 0px solid rgb(0, 0, 0); /* Línea divisoria entre la imagen y el texto */
+  
+}
+
+.tarjeta h2, .tarjeta p {
+  margin: 15px 0;
+  color: rgb(0, 0, 0);
+}
+
+

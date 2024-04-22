@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2px 80px;
+    align-items: center;
+    background-color: #000000;
+}
+
+body::-webkit-scrollbar {
+    background: transparent;
+    width: 1px;
+}
+
+
+.links {
+    display: flex;
+    column-gap: 20px;
+    padding: 0 10px 0 0;
+}
+
+.links a {
+    color: white;
+    text-decoration: none;
+}
+
+.links a:hover {
+    color: red;
+    transition: 0.7s;
+    transform: matrix();
+}
+
+body {
+
+    background: #000000;
+    color: rgb(255, 255, 255);
+    overflow-x: hidden;
+}
+
+.titulo{
+
+font-size: 40px;
+margin-top: 25px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 100%;
+padding: 0 40% 0 200px;
+
+}
+
+
+.card {
+width: 500px;
+height: 400px;
+max-width: 300px;
+background-color: #181818;
+border-radius: 10px;
+box-shadow: 0 0 10px rgb(250, 249, 249);
+padding: 20px;
+margin: 20px;
+flex-direction: column;
+
+}
+
+.card-img {
+
+border-radius: 10px;
+}
+
+.card-content {
+margin-top: 20px;
+}
+
+.card-title {
+font-size: 20px;
+font-weight: bold;
+margin-bottom: 10px;
+}
+
+.card-description {
+font-size: 16px;
+color: #ffffff;
+}
+
+.card-link {
+display: block;
+margin-top: 20px;
+text-decoration: none;
+color: #ff0000;
+}
+
+.card-link:hover {
+text-decoration: underline;
+}
+
+
+.cartas {
+
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 80px;
+}
+
+.impresora {
+height: 212px;
+}
+
+footer {
+background-color: #ffffff;
+color: rgb(0, 0, 0);
+padding: 50px 0;
+width: 100%;
+margin-top: 100px
+
+/* Evita que el pie de página se contraiga */
+; /* Empuja el pie de página hacia abajo */
+
+}
+
+.footer-content {
+
+
+
+margin-left: 140PX;
+
+
+}
+
+.footer-content p {
+margin: 1;
+
+}
+
+.links2 {
+display: flex;
+column-gap: 20px;
+padding: 0 10px 0 0;
+}
+
+.links2 a {
+color: rgb(0, 0, 0);
+text-decoration: none;
+}
+
+.links2 a:hover {
+color: red;
+transition: 0.7s;
+transform: matrix();
+}
+
+.card-img{
+transition: ease-in-out 0.3s;
+
+
+}
+
+
+.card-img:hover{
+transform: scale(1.1);
+}
+
